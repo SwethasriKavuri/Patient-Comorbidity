@@ -1,0 +1,12 @@
+Pleural Effusion : Exudative vs. Transudative Pleural Effusion Pneumonia, Liver Disease, Renal Disease, Malnutrition, Empyema, Malignancy, Lupus, TB, Sarcoidosis, Esophageal Rupture, Pleurisy, Hemothorax, Inflammatory Effusion, Malignant Effusion
+Atelectasis : Obstructive Foreign Body aspiration, Emphysema, Non-Obstructive ARDS, Mass, Pneumonia, Lung Contusion, Mucus
+Ground Glass Opacity : Pulmonary Edema, Pneumonia, Pneumonitis, Acute Rejection of Transplanted Lung, ARDS, Hemorrhage,  Pulmonary Contusion, Drug Toxicity, Sarcoidosis
+Airspace Opacities : Pneumonia, Pulmonary Hemorrhage, Carcinoma,  TB, Obstructive Foreign Body aspiration, Emphysema, Non-Obstructive ARDS, Mass, Pneumonia, Lung Contusion, Mucus
+Alveolar Edema : Heart Failure, Renal Failure, ARDS
+Interstitial Edema : Heart Failure, Renal Failure, ARDS
+Pulmonary Vascular Congestion: Heart Failure
+Focal Consolidation : Heart Failure, ARDS, Volume Overload, Renal Failure,  Pneumonia, Trauma, SLE, Sarcoid
+Infiltrates : Pneumonia, Hemorrhage, TB
+Consolidation : Pneumonia, Mass, Pulmonary Edema, Hemorrhage
+Air Space Shadowing : Pneumonia, Mass, Pulmonary Edema, Hemorrhage
+Aspiration : Pneumonia

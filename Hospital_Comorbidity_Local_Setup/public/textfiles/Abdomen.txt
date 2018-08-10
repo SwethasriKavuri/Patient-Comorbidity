@@ -1,0 +1,47 @@
+Biliary Dilation : Obstruction, Stricture, Stones, Cholangitis, Neoplasm, Pancreatitis
+Thickening of colon : Colitis, diverticulitis, carcinoma, ischemia
+pericolonic stranding : Colitis, diverticulitis, carcinoma, ischemia
+Cholelithiasis : Acute Cholecystitis
+stones : Acute Cholecystitis
+Gallbladder wall thickening : Acute Cholecystitis
+pericholecystic fluid : Acute Cholecystitis
+Enlarged Pancreas : Acute Pancreatitis
+Peripancreatic fluid collections : Acute Pancreatitis
+pancreatic psuedocysts : Acute Pancreatitis
+Dilated Appendix : Acute Appendicitis
+periappendix stranding : Acute Appendicitis
+Hydronephrosis : Renal Stone
+perinephric stranding : Renal Stone
+rim sign : Renal Stone
+Disrupted splenic capsule : Splenic Laceration
+lack of splenic margin : Splenic Laceration
+hypodensity : Splenic Laceration
+hemoperitoneum : Splenic Laceration
+contrast blush : Splenic Laceration
+extravasation : Liver Laceration
+Splenic Laceration : Liver Laceration
+Perihepatic fluid : Liver Laceration
+Fragmented Lobe : Liver Laceration
+capsular tear : Liver Laceration
+parenchymal disruption : Liver Laceration
+Linear hypodensity of pancreas : Pancreatic laceration
+Retropancreatic fluid : Pancreatic laceration
+Retroperitoneal fluid : Source of bleeding
+hematoma : Source of bleeding
+Retroperitoneal extravasation of contrast : Renal Contusion, Laceration, Shattered Kidney,  laceration of renal pelvis
+Adrenal hematoma : Renal Contusion, Laceration, Shattered Kidney,  laceration of renal pelvis
+Mesenteric laceration : Bowel perforation, Ischemic Bowel
+hemoperitoneum : Bowel perforation, Ischemic Bowel
+Extraluminal Air : Bowel perforation
+Free Air : Bowel perforation
+Pneumoperitoneum : Bowel perforation
+extravasation of contrast : Bowel perforation
+discontinuos bowel wall : Bowel perforation
+Extravasation of urine : Bladder Rupture
+Obstructive Gas Pattern : Ileus, Volvulus, Small bowel Obstruction, Large Bowel Obstruction
+Dilated Loops of bowel : Small Bowel Obstruction, Ileus
+Sentinel Loop : Pancreatitis, Ileus
+Dilation of colon : Large Bowel Obstruction, volvulus, Toxic megacolon
+Fluid levels : Ileus
+accumulation : Ileus
+Free Gas : Bowel Perforation

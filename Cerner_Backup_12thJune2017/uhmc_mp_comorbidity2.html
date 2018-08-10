@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<?xml version="1.0" encoding="UTF-8" ?>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="XMLCCLREQUEST,APPLINK,MPAGES_EVENT" name="discern"/>
+ 
+<link rel="stylesheet" type="text/css" media="screen" href="$SOURCE_DIR$\css\colorbox.css" />
+<script language="javascript" type="text/javascript" src="$SOURCE_DIR$\jquery\jquery-1.11.0.min.js"></script>
+<script language="javascript" type="text/javascript" src="$SOURCE_DIR$\jquery\jquery.colorbox-min.js"></script>
+<script language="javascript" type="text/javascript" src="$SOURCE_DIR$\js\uhmc_mp_comorbidity2.js"></script>
+<script language="javascript" type="text/javascript" src="$SOURCE_DIR$\js\CoMorbRules.js"></script>
+<script language="javascript" type="text/javascript" src="$SOURCE_DIR$\jquery\jquery-ui-1.8.14.js"></script>
+<script language="javascript" type="text/javascript" src="$SOURCE_DIR$\jquery\jquery.blockUI.js"></script>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+ 
+<script type="text/javascript">
+$(document).ready(function(){
+	$(".inline").colorbox({
+		inline:true,
+		innerWidth:'1000px',
+		innerHeight:'700px',
+		onClosed: function(){
+        	$('#helpWindow').html('');
+    		}
+		});
+	});
+</script>
+ 
+<style type="text/css">
+ 
+.imageBackSingle{
+position: absolute;
+display:none;
+background: transparent;
+}
+ 
+.imageBack{
+position: absolute;
+display:none;
+background: transparent;
+}
+ 
+.dynamicDiv {
+position: relative;
+border: 1px solid red;
+padding-left: 10px;
+padding-bottom: 1%;
+font-family: sans-serif;
+font-size: 14px;
+}
+ 
+.borderMain {
+ 
+padding-left: 3%;
+padding-bottom : 2%;
+padding-top: 1%;
+ 
+}
+ 
+span{
+font-size: 16px;
+font-weight: 700;
+}
+ 
+.test {
+text-align: center;
+font-size: 16px;
+padding: 4px;
+width: 50%;
+border-width: 1px;
+border-style: solid;
+border-color: #cc0000;
+background-color: #EEEDD8;
+}
+ 
+tr{
+    height:25px;
+    cursor: pointer;
+}
+ 
+a {
+    cursor: pointer;
+}
+ 
+</style>
+ 
+</head>
+ 
+<body bgcolor="#EEEDD8" style="font-family:sans-serif; font-size:14px;" onload='javascript:init();'>
+<div style='display:none'>
+	<div id='helpmenu1' style='padding:10px; background:#fff;'>
+		<a onclick='javascript:closeHelp();'>
+		<img src='$SOURCE_DIR$\img\close.png' alt='Close Help' style='float:right; width:32px; height:32px;' /></a>
+		<br><br>
+		<table style='color:#333;padding:10px;border:5px solid #B8B8B8;background-color:white;text-align:left;'>
+		<col width='35%'>
+		<col width='5%'>
+		<col width='60%'>
+		<tr><td valign='top'>
+		<ul>
+		<li style='margin-bottom: 20px;' onclick="javascript:getHelpGuide();"><b><font color='blue'>How To Guide</font></b>
+		<ul><li><font color='blue'><a href='$SOURCE_DIR$\img\Comorbidities_HowToGuide.docx'>Open a printable version</a></li></ul>
+		</li>
+		<li style='margin-bottom: 20px;'>
+		<div id='comorbrulesLabel' onclick='javascript:toggleRules();'><b>Show Comorbidities Rules</b></div>
+		<ul id='comorbrules'>
+		<li onclick="javascript:getHelp('Acid Base Disorder');"><font color='blue'>Acid Base Disorder</font></li>
+		<li onclick="javascript:getHelp('Anemia');"><font color='blue'>Anemia</font></li>
+		<li onclick="javascript:getHelp('Dehydration');"><font color='blue'>Dehydration</font></li>
+		<li>Electrolyte Abnormality
+		<ul>
+		<li onclick="javascript:getHelp('Hypokalemia');"><font color='blue'>Hypokalemia</font></li>
+		<li onclick="javascript:getHelp('Hyperkalemia');"><font color='blue'>Hyperkalemia</font></li>
+		<li onclick="javascript:getHelp('Hyponatremia');"><font color='blue'>Hyponatremia</font></li>
+		<li onclick="javascript:getHelp('Hypernatremia');"><font color='blue'>Hypernatremia</font></li>
+		<li onclick="javascript:getHelp('Hypocalcemia');"><font color='blue'>Hypocalcemia</font></li>
+		<li onclick="javascript:getHelp('Hypercalcemia');"><font color='blue'>Hypercalcemia</font></li>
+		<li onclick="javascript:getHelp('Hypophosphatemia');"><font color='blue'>Hypophosphatemia</font></li>
+		<li onclick="javascript:getHelp('Hyperphosphatemia');"><font color='blue'>Hyperphosphatemia</font></li>
+		<li onclick="javascript:getHelp('Hypomagnesemia');"><font color='blue'>Hypomagnesemia</font></li>
+		<li onclick="javascript:getHelp('Hypermagnesemia');"><font color='blue'>Hypermagnesemia</font></li>
+		</ul></li>
+		<li onclick="javascript:getHelp('Elevated Blood Glucose');"><font color='blue'>Elevated Blood Glucose</font></li>
+		<li onclick="javascript:getHelp('Granulocytopenia');"><font color='blue'>Granulocytopenia</font></li>
+		<li onclick="javascript:getHelp('Hypercholesterolemia');"><font color='blue'>Hypercholesterolemia</font></li>
+		<li onclick="javascript:getHelp('Hypertension');"><font color='blue'>Hypertension</font></li>
+		<li onclick="javascript:getHelp('Hypoglycemia');"><font color='blue'>Hypoglycemia</font></li>
+		<li onclick="javascript:getHelp('Hypotension');"><font color='blue'>Hypotension</font></li>
+		<li onclick="javascript:getHelp('Hypoxia');"><font color='blue'>Hypoxia</font></li>
+		<li onclick="javascript:getHelp('Kidney Injury');"><font color='blue'>Kidney Injury</font></li>
+		<li onclick="javascript:getHelp('Lactic Acidosis');"><font color='blue'>Lactic Acidosis</font></li>
+		<li onclick="javascript:getHelp('Malnutrition');"><font color='blue'>Malnutrition</font></li>
+		<li onclick="javascript:getHelp('Morbid Obesity');"><font color='blue'>Morbid Obesity</font></li>
+		<li onclick="javascript:getHelp('Obesity');"><font color='blue'>Obesity</font></li>
+		<li onclick="javascript:getHelp('Pancytopenia');"><font color='blue'>Pancytopenia</font></li>
+		<li onclick="javascript:getHelp('Respiratory Failure');"><font color='blue'>Respiratory Failure</font></li>
+		<li onclick="javascript:getHelp('Shock');"><font color='blue'>Shock</font></li>
+		<li onclick="javascript:getHelp('SIRS');"><font color='blue'>SIRS/Sepsis</font></li>
+		<li onclick="javascript:getHelp('UTI');"><font color='blue'>UTI</font></li>
+		</ul></li>
+		</ul>
+		</td>
+		<td></td>
+		<td style='vertical-align:top;width:700px;'>
+		<div id='helpWindow'></div>
+		</td>
+		</tr>
+		</table>
+	</div>
+</div>
+<div id='topmenu' align='center'>
+	<a onclick='javascript:commit();'>
+	<input type='image' src='$SOURCE_DIR$\img\commit.png' title='COMMIT' style='width: 36px; height: 36px; margin-left: 80px;'></a>
+	<a class='inline' href='#helpmenu1'>
+	<input type='image' src='$SOURCE_DIR$\img\help.png' title='HELP' style='width: 36px; height: 36px; margin-left: 80px;' /></a>
+</div>
+<div id='pcheader'></div>
+<div id='pcbody'></div>
+<div id='ccheader'></div>
+<div id='ccbody'></div>
+<div id='ocheader'></div>
+<div id='ocbody'></div>
+</body>
+</html>

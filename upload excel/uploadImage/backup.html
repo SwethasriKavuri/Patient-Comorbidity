@@ -1,0 +1,135 @@
+<html>
+
+<head><title>Template Upload</title>
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.7.7/xlsx.core.min.js"></script>
+				<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/xls/0.7.4-a/xlsx.js"></script>
+				<script lang="javascript" src="dist/xlsx.full.min.js"></script>
+				<script type="text/javascript" src="xlsx.full.min.js"></script>
+
+</head>
+
+<body>
+	<form action="/example/UploadImage" method="POST" enctype="multipart/form-data" name="productForm" id="productForm"><br><br>
+		<table width="400px" align="center" border=0 style="background-color:ffeeff;">
+			<tr>
+				<td align="center" colspan=2 style="font-weight:bold;font-size:20pt;">File Details</td>
+			</tr>
+
+            <tr>
+				<td align="center" colspan=2>&nbsp;</td>
+			</tr>
+
+			<tr>
+				<td>Download Template: </td>
+				<td>
+					<a href="Template.xlsx" download> Template </a>
+				<td>
+			</tr>
+
+
+			<tr>
+				<td align="center" colspan=2>&nbsp;</td>
+			</tr>
+
+			<tr>
+				<td>Upload Template : </td>
+				<td>
+					<input type="file" name="file" id="file">
+				<td>
+			</tr>
+
+			<tr>
+				<td></td>
+				<td><input type="submit" name="Submit" value="Submit" onclick="upload(this)"></td>
+			</tr>
+			   
+				<script>
+
+					document.getElementById('file').addEventListener('change', filePicked, false);
+
+						    var file
+						    function filePicked(oEvent) {
+						    file = this.files[0];
+
+						    if (file.type != "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
+						    {
+						    	alert("invalid file type")
+						        return
+						    }
+
+						    var oFile = oEvent.target.files[0];
+						    var sFilename = oFile.name;
+						    // Create A File Reader HTML5
+						    var reader = new FileReader();
+						    alert("first")
+
+						    // Ready The Event For When A File Gets Selected
+						    reader.onload = function(e) {
+						        var data = e.target.result;
+						        var cfb = XLSX.CFB.read(data, {type: 'binary'});
+						        alert("wb")
+						        var wb = XLSX.parse_xlscfb(cfb);
+						        // Loop Over Each Sheet
+						        wb.SheetNames.forEach(function(sheetName) {
+						            // Obtain The Current Row As CSV
+						            var sCSV = XLS.utils.make_csv(wb.Sheets[sheetName]);   
+						            var oJS = XLS.utils.sheet_to_row_object_array(wb.Sheets[sheetName]);   
+
+						            //$("#my_file_output").html(sCSV);
+						            console.log(oJS)
+						        });
+						    };
+
+						    // Tell JS To Start Reading The File.. You could delay this if desired
+						    reader.readAsBinaryString(oFile);
+
+                            
+						    
+							}
+
+
+						   
+
+						    // alert("name : " + file.type);
+
+						    // console.log("size : " + file.size);
+
+						    // console.log("type : " + file.type);
+
+						    // console.log("date : " + file.lastModified);
+
+						
+
+					function upload(input)
+					{
+						
+						alert("excel uploaded")
+
+						var des = require('xlsx');
+					    alert("done !!!")
+
+						var workbook = des.readFile(fl.name);
+						var sheet_name_list = workbook.SheetNames;
+						console.log(XLSX.utils.sheet_to_json(workbook.Sheets[sheet_name_list[0]]))
+						// var xhr = new XMLHttpRequest();
+						// xhr.upload.onprogress = function(e) {
+						// 	console.log(e.loaded, e.total)
+						// }
+						// xhr.upload.onload = function(e) {
+						// 	console.log('file upload')
+						// }
+						// xhr.open("POST", "/test/uploadfile.php", true);
+						// xhr.send(new FormData(input.parentElement));
+					}
+	</script>
+			<tr>
+				<td colspan="2">&nbsp;</td>
+			</tr>
+
+		</table>
+	</form>
+</body>
+
+</html>

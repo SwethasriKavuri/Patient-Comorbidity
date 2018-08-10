@@ -1,0 +1,112 @@
+<html>
+
+<head><title>Template Upload</title>
+<script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
+
+<!-- <script src="C:\Users\Lavanya Kandhibedala\Desktop\uploadImage\js-xlsx-master\dist\xlsx.full.min.js"></script> -->
+
+</head>
+
+<body>
+	<form action="/example/UploadImage" method="POST" enctype="multipart/form-data" name="productForm" id="productForm"><br><br>
+		<table width="400px" align="center" border=0 style="background-color:ffeeff;">
+			<tr>
+				<td align="center" colspan=2 style="font-weight:bold;font-size:20pt;">File Details</td>
+			</tr>
+
+            <tr>
+				<td align="center" colspan=2>&nbsp;</td>
+			</tr>
+
+			<tr>
+				<td>Download Template: </td>
+				<td>
+					<a href="Template.xlsx" download> Template </a>
+				<td>
+			</tr>
+
+
+			<tr>
+				<td align="center" colspan=2>&nbsp;</td>
+			</tr>
+
+			<tr>
+				<td>Upload Template : </td>
+				<td>
+					<input type="file" name="file" id="file">
+				<td>
+			</tr>
+
+			<tr>
+				<td></td>
+				<td><input type="submit" name="Submit" value="Submit" onclick="upload(this)"></td>
+			</tr>
+			   
+				<script>
+
+					        document.getElementById('file').addEventListener('change', filePicked, false);
+
+						    var file
+						    function filePicked(oEvent) {
+
+						    file = this.files[0];
+
+						    if (file.type != "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
+						    {
+						    	alert("invalid file type")
+						        return
+						    }
+						    alert("there"+file.name)
+						    var url = file.name;
+							var oReq = new XMLHttpRequest();
+							oReq.open("GET", url, true);
+							oReq.responseType = "arraybuffer";
+alert("done")
+console.log(oReq)
+						    oReq.onload = function(e) {
+						     	alert("there   on load "+e)
+							  var arraybuffer = oReq.response;
+
+							  /* convert data to binary string */
+							  var data = new Uint8Array(arraybuffer);
+							  var arr = new Array();
+							  for(var i = 0; i != data.length; ++i) arr[i] = String.fromCharCode(data[i]);
+							  var bstr = arr.join("");
+
+							  /* Call XLSX */
+							  var workbook = XLSX.read(bstr, {type:"binary"});
+
+							  /* DO SOMETHING WITH workbook HERE */
+							  var first_sheet_name = workbook.SheetNames[0];
+							  /* Get worksheet */
+							  var worksheet = workbook.Sheets[first_sheet_name];
+							  console.log(XLSX.utils.sheet_to_json(worksheet,{raw:true}));
+							 }
+
+							
+
+						    
+
+                            oReq.send(); 
+						    
+							}
+							
+						
+
+					function upload(input)
+					{
+						
+						alert("excel uploaded")
+
+						
+					}
+	</script>
+			<tr>
+				<td colspan="2">&nbsp;</td>
+			</tr>
+
+		</table>
+	</form>
+</body>
+
+</html>

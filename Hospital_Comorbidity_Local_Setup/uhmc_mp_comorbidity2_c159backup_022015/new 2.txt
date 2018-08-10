@@ -1,0 +1,36 @@
+				
+				/*
+				for(var j=2; j<z[i].length; j++) {
+					for(var k=0;k<z[i][j].length;k++){
+					
+						if((z[i][j][k]=="Traumatic"))
+						{
+							console.log("this is here:", z[i][j][k]);
+						
+					tableBody += "<br><input class='rrPart"+index+findings_prefix+i+"' id='rrGrp"+index+findings_prefix+i+"Chk"+j+"' type='checkbox' data-binding='traumatic-non-traumatic'>"+z[i][j][k];
+					}
+						if((z[i][j][k]=="Non Traumatic"))
+						{
+							console.log("this is here:", z[i][j][k]);
+						
+					tableBody += "<br><input class='rrPart"+index+findings_prefix+i+"' id='rrGrp"+index+findings_prefix+i+"Chk"+j+"' type='checkbox' data-binding='traumatic-non-traumatic'>"+z[i][j][k];
+					}
+						
+						if((z[i][j][k]=="Acute"))
+						{
+							console.log("this is here:", z[i][j][k]);
+						
+					tableBody += "<br><input class='rrPart"+index+findings_prefix+i+"' id='rrGrp"+index+findings_prefix+i+"Chk"+j+"' type='checkbox' data-binding='acute-chronic'>"+z[i][j][k];
+					}
+						if((z[i][j][k]=="Chronic"))
+						{
+							console.log("this is here:", z[i][j][k]);
+						
+					tableBody += "<br><input class='rrPart"+index+findings_prefix+i+"' id='rrGrp"+index+findings_prefix+i+"Chk"+j+"' type='checkbox' data-binding='acute-chronic'>"+z[i][j][k];
+					}
+						
+						if((z[i][j][k]=="Acute on Chronic")){
+					tableBody += "<br><input class='rrPart"+index+findings_prefix+i+"' id='rrGrp"+index+findings_prefix+i+"Chk"+j+"' type='checkbox'>"+z[i][j][k];
+						}
+					}
+				}*/
